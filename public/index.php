@@ -32,5 +32,8 @@ $dbconfig = new Zend_Config_Ini($url, 'production');
 $db = Zend_Db::factory($dbconfig->db);
 $db->query("SET NAMES UTF8");
 Zend_Db_Table::setDefaultAdapter($db);
+
+$autoloader = Zend_Loader_Autoloader::getInstance();
+$autoloader->registerNamespace(array('Db_', 'Boot_'));
 $application->bootstrap()
             ->run();

@@ -1,15 +1,12 @@
 <?php
-
-class IndexController extends Zend_Controller_Action
+class IndexController extends Boot_ControllerBase
 {
-
-    public function init()
-    {
-        /* Initialize action controller here */
-    }
 
     public function indexAction()
     {
+        $db = parent::getdb();
+        $some = $db->fetchAll('select * from chromeurllog limit 10');
+
     }
 
 
