@@ -1,7 +1,6 @@
 zend
 ====
 
-A initialized zend framework here so I can quickly begin a project  from it
+A initialized zend project here so I can quickly begin a project  from it
 
-1.config db
-  v applicaton/configs/applicaton.ini
+1. Base_Registry::getDb() added
